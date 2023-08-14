@@ -1,0 +1,135 @@
+body > header {
+    @include flex(row);
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.5em 3em; 
+
+    > div {
+        font-family: $theme-heading-font;
+        &.logo{
+            text-align: center;
+
+            > h1{
+                font-size: 2em;
+                font-weight: bold;
+            }        
+        }
+
+        &.navigations{
+            flex: 1;
+            font-size: 0.8em;
+            font-weight: bold;            
+            @include flex(row);
+            gap: 3em;
+
+            > ul{    
+                @include flex(row);
+                gap: 3em;            
+                color: $theme-text-color;
+                align-items: center;
+
+                > li {
+                    cursor: pointer;                    
+                }                
+            }
+
+            > div {
+                
+                &.actions{
+                    margin-left: auto;                        
+                    > a{
+                        color: $theme-text-color;
+                        display: inline-block;
+                        padding: 0.7em 1.5em;                
+                        text-decoration: none;
+                        border-radius: 1em;
+                        transition: 500ms;
+                        border: 1px solid #fff;
+        
+                        &:nth-child(2) {
+                            border: 1px solid $theme-text-color;
+                            border-radius: 1em;
+    
+                            &:hover{
+                                background: $theme-background-color-alt;
+                            }
+                        }
+    
+                        &:hover{                                
+                            border: 1px solid $theme-text-color;
+                        }
+                    }
+                }
+            }                   
+        }
+        
+        &.burger{
+            display: none;
+        }        
+    }
+
+    @media screen and (max-width: $large) {
+        padding: 1.5em 1em; 
+        > div {
+            &.navigations{
+                > ul{
+                    font-size: 1.15em;
+                }
+
+                &.nav-active{	
+                    transform: translateY(0%);
+                    visibility: visible;
+                    overflow-y: scroll;
+                }                
+            }
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        padding: 0em 2.5em;    
+        > div{
+            &.navigations{                
+                position: fixed;		
+                height: 100vh;
+                top: 0;
+                left:0;
+                background-color: #fff;
+                width: 100vw;
+                display: flex;
+                flex-direction: column; 
+                align-items: center;
+                justify-content: center;
+                transform: translateY(-100%);
+                transition: transform 0.5s, visibility 0.5s ease-in;
+                
+                > ul{                    
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    font-size: 1.5em;
+                    gap: 5em;
+                }
+                
+                > div {
+                    &.actions{
+                        margin-left: 0;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        font-size: 1.5em;
+                        gap: 5em;
+                    }
+                }
+                
+            }
+
+            &.burger{
+                position: fixed;
+                display: block;
+                cursor: pointer;
+                font-size: 1.5em;
+                z-index: 3;
+                right: 1.5em;
+            }
+        }      
+    }
+}

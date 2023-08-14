@@ -1,0 +1,34 @@
+@mixin flex($dir: column, $centered: false) {
+    display: flex;
+    flex-direction: $dir;
+    gap: 1rem;
+  
+    @if $centered {
+      justify-content: center;
+      align-items: center;
+    }
+    
+}
+
+@mixin grid($columns: 12, $centered: false) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: 1em;
+
+    @if $centered {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin grid-rows($rows: 1, $centered: false) {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat($rows, 1fr);
+    gap: 1em;
+
+    @if $centered {
+        justify-content: center;
+        align-items: center;
+    }
+}

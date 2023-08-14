@@ -1,0 +1,8 @@
+.edit-input {
+    background: transparent;
+    border: none;    
+}
+
+.edit-input:empty {
+    border-bottom: 1px solid #ccc;
+}

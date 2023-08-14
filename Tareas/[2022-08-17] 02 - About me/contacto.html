@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mi</title>
+</head>
+<body>
+    <header id="header-bar">       
+        <div id="header-content">
+            <h1>Sobre mi</h1>
+            <img width="50px" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-File.png" alt="Logo">
+        </div>
+    </header>
+
+    <nav>
+        <ol>
+            <li>
+                <span><a href="./">Datos Generales</a></span>
+            </li>
+            <li>
+                <span><a href="./hobbies-pasatiempos.html">Hobbies y pasatiempos</a></span>
+            </li>
+            <li>
+                <span><a href="./vida-academica.html">Vida académica</a></span>
+                <ol>
+                    <li><a href="./vida-academica.html#basica"> Educación Básica </a></li>
+                    <li><a href="./vida-academica.html#media"> Educación Media </a></li>
+                    <li><a href="./vida-academica.html#superior"> Educación Superior </a></li>
+                </ol>
+            </li>
+            <li>
+                <span><a href="./contacto.html">Contacto</a></span>
+            </li>
+        </ol>
+    </nav>
+
+    <main>
+        <section id="contact-form">
+            <fieldset>
+                <legend>Contacto</legend>
+                <form>
+                    <label>
+                        <p><b>Email:</b></p>
+                        <input type="email" name="email" id="email-input">
+                    </label>
+                    <br>
+                    <label>
+                        <p><b>Mensaje:</b></p>
+                        <textarea name="message-textArea" id="message" cols="30" rows="10"></textarea>
+                    </label>
+                    <br>
+                    <button type="button" ="btn" id="enviar">Enviar</button>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © Copyright 2022 - Roberto Marenco
+        </p>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/contacto.js"></script>
+</body>
+</html>

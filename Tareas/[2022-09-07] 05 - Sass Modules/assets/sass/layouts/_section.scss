@@ -1,0 +1,121 @@
+main > section {    
+    min-height: 100vh;
+    @include grid(2, true);
+    gap: 0em;
+    padding: 3em 12em;
+
+    &:first-child{        
+        min-height: calc(100vh - 6em);
+        > div {
+            min-height: 100%;
+            @include flex();
+            justify-content: space-around;
+
+            > .content-header{
+                > h1{
+                    font-size: 4.5em;
+                    font-weight: 700;
+                }                
+            }
+
+            > .content-information{                
+                > p {
+                    color: $theme-text-color;
+                    font-weight: 700;
+                    font-size: 1.25em;
+                }                
+            }
+
+            > .content-button{
+                height: auto;
+                > a {
+                    display: inline-block;
+                    padding: 1em 2.5em;
+                    text-decoration: none;
+                    background: black;
+                    color: white;
+                    border-radius: 0.75em;
+                    font-weight: 600;
+                }
+            }
+
+            > .content-sponsor{
+                @include flex(row);
+                justify-content: space-between;
+                height: auto;                
+            }
+        }
+        
+        > img {
+            justify-self: right;
+            width: 70%;            
+        }
+    }
+
+    @media screen and (max-width: $large) {
+        padding: 3em 7em;
+        gap: 3em;
+        &:first-child{
+            > div {
+                justify-content:space-evenly;
+                > .content-header{
+                    > h1{
+                        font-size: 3em;
+                    }                
+                }
+    
+                > .content-information{                
+                    > p {
+                        font-size: 1em;
+                    }                
+                }
+    
+                > .content-button{
+                    > a {
+                        padding: 0.75em 2em;                        
+                    }
+                }
+    
+                > .content-sponsor{
+                    > img {
+                        width: 20%;
+                    }
+                }
+            }
+
+            > img {                
+                justify-self: right;
+                width: 100%;            
+            }
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        padding: 0;
+        @include grid-rows(2);
+
+        grid-template-columns: none;
+        &:first-child{            
+            min-height: calc(100vh - 5em);
+
+            > div {                
+                text-align: center;                                
+
+                > .content-header{
+                    > h1{
+                        font-size: 2.5em;
+                    }                
+                }
+    
+                > .content-button{
+                    padding-block: 1em;
+                }               
+            }
+            
+            > img {
+                grid-row: 1;
+                justify-self: center;         
+            }
+        }
+    }
+}

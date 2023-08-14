@@ -1,0 +1,85 @@
+:root{
+    box-sizing: border-box;    
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;    
+}
+
+.main{
+    min-height: 100vh;
+    margin: 1em;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    justify-content: center;
+}
+
+.cards{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 1em;
+    flex: 1 0 400px;
+    max-width: 500px;
+
+    padding: 1em;
+}
+
+.cards > .card-header{
+    margin-inline: auto;
+}
+
+.cards > .card-content{
+    margin-block: 1em;
+}
+
+.cards > .card-content > p{
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.cards > .card-content > p:last-child{
+    margin-bottom: 0;
+}
+
+.cards > .card-footer{    
+    display: flex;
+    gap: 0.5em;
+}
+
+.btn{
+    border-radius: 0 0.5em;
+    padding: 0.5em 2em;
+    width: 100%;
+    color: white;
+    border: none;
+    font-size: 0.75em;
+}
+
+.btn-cancel{
+    background: hsl(348, 83%, 47%);
+    transition: 250ms;
+}
+
+.btn-cancel:hover{
+    background: hsl(348, 83%, 40%);
+}
+
+.btn-accept{
+    background: hsl(120, 100%, 25%);
+    transition: 250ms;
+}
+
+.btn-accept:hover{
+    background: hsl(120, 100%, 20%);
+}

@@ -1,0 +1,45 @@
+1. Objetos JSON
+    standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).
+
+2. Estructuras de control
+    If
+        if the given expression is true, the statement or statements will be executed. Otherwise, they are skipped. May also consist of multiple parts, incorporating else and else if sections. 
+    While
+        The while statement executes a given statement as long as a given expression is true. Also recognizes the break and continue keywords. The break keyword causes the immediate termination of the loop. The continue keyword finishes the current iteration of the while block or statement, and checks the condition to see, if it is true. If it is true, the loop commences again.
+    Do While
+        Executes a given statement as long as a given expression is true - however, unlike the while statement, this control structure will always execute the statement or block at least once. Break and continue are both recognized.
+    For
+        Allows greater control over the condition of iteration. While it has a conditional statement, it also allows a pre-loop statement, and post-loop increment without affecting the condition. The initial expression is executed once, and the conditional is always checked at the beginning of each loop. At the end of the loop, the increment statement executes before the condition is checked once again. 
+    Switch
+        Evaluates an expression, and determines flow control based on the result of the expression.
+    With
+        Is used to extend the scope chain for a block
+
+3. Let - Const vs. Var
+    Variables declared with var and const are scoped to the immediate function body.
+    Variables declared with the var keyword are hoisted. Hoisting means that the variable can be accessed in their enclosing scope even before they are declared.
+    Variables declared with the let keyword are block-scoped, which means the variables will have scope to the immediate enclosing block.
+    
+4. Funciones (normales, anónimas y funciones flecha)
+
+    Anónimas: Es una función que no tiene ningún nombre asociado. Normalmente usamos la palabra clave de función antes del nombre de la función para definir una función en JavaScript, sin embargo, en funciones anónimas en JavaScript, usamos solo la palabra clave de función sin el nombre de la función. No es accesible después de su creación inicial, solo se puede acceder a ella mediante una variable en la que está almacenada como una función como un valor.
+
+    Flecha: son funciones anónimas con una sintaxis más compacta y que aparte de la diferencia en la sintaxis también tienen algunas peculiaridades como que no vinculan su propio this o que no se pueden usar como constructores.
+
+    Normales: son uno de los bloques de construcción fundamentales en JavaScript. Una función en JavaScript es similar a un procedimiento — un conjunto de instrucciones que realiza una tarea o calcula un valor, pero para que un procedimiento califique como función, debe tomar alguna entrada y devolver una salida donde hay alguna relación obvia entre la entrada y la salida. Para usar una función, debes definirla en algún lugar del ámbito desde el que deseas llamarla.
+
+5. truthy y Falsy
+
+    Truthy value is a value that is considered true when encountered in a Boolean context. All values are truthy unless they are defined as falsy. That is, all values are truthy except false, 0, -0, 0n, "", null, undefined, and NaN.
+
+    A falsy (sometimes written falsey) value is a value that is considered false when encountered in a Boolean context.
+
+6. Short Circuits
+
+    In JavaScript short-circuiting, an expression is evaluated from left to right until it is confirmed that the result of the remaining conditions is not going to affect the already evaluated result. If the result is clear even before the complete evaluation of the expression, it short circuits and the result will be returned. Short circuit evaluation avoids unnecessary work and leads to efficient processing.
+
+7. Null vs. Undefined (Diferencias)
+
+    Ambos sirven para algo muy parecido, que es indicar la ausencia de valor. Lo que ocurre es que undefined es un valor que denota que no hay valor porque no se ha definido todavía, mientras que null se usa para indicar que no hay valor porque así lo hemos querido indicar expresamente. Pero en ambos casos el significado último de "ausencia de valor" es el mismo.
+
+    
